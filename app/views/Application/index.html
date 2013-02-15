@@ -1,4 +1,30 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{welcome /}
+#{if frontStructure}
+
+	#{display structure:frontStructure, as:'home' /}
+	
+	#{if olderStructures.size()}
+	
+		<div class="older-structures">
+			<h3>Older structures <span class="from">from this app</span></h3>
+        
+            #{list items:olderStructures, as:'oldStructure'}
+                <div class="post">
+                    <h2 class="structure-name">
+                        <a href="#">${oldStructure.name}</a>
+                    </h2>
+                </div>
+            #{/list}
+		</div>
+	
+	#{/if}
+	    
+#{/if}
+ 
+#{else}
+    <div class="empty">
+        There is currently nothing to read here.
+    </div>
+#{/else}

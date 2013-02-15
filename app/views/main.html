@@ -3,14 +3,28 @@
 <html>
     <head>
         <title>#{get 'title' /}</title>
-        <meta charset="${_response_encoding}">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
-        #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-        <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-        #{get 'moreScripts' /}
     </head>
     <body>
-        #{doLayout /}
+	    <div id="header">
+	    	<div id="logo">scaffold builder</div>
+	    	<ul id="tools">
+	    		<li><a href="#">Log in to build!</a></li>
+	    	</ul>
+	    	<div id="title">
+	    		<span class="about">About this app</span>
+	    		<h1><a href="#">${apptitle}</a></h1>
+	    		<h2>${appbaseline}</h2>
+	    	</div>
+	    </div>
+	    <div id="main">
+	        #{doLayout /}
+	    </div>
+	    
+	    <p id="footer">
+	    	This is the app that there is not much to.
+	    </p>
     </body>
 </html>

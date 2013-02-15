@@ -5,9 +5,19 @@ import models.*;
 
 public class BasicTest extends UnitTest {
 
-    @Test
-    public void aVeryImportantThingToTest() {
-        assertEquals(2, 1 + 1);
-    }
+	@Before
+	public void setup() {
+		Fixtures.deleteDatabase();
+		Fixtures.loadModels("data.yml");
+	}
 
+    @Test
+    public void createAndRetrieveStructure() {
+        // retreive saved structure
+        Structure primera = Structure.find("byName", "primera estructura").first();
+
+        // test
+        assertNotNull(primera);
+        assertEquals("primera estructura", primera.name);
+    }
 }

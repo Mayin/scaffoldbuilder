@@ -1,0 +1,14 @@
+*{ Display a structure in one of these modes: 'full', 'home' or 'teaser' }*
+ 
+<div class="structure ${_as == 'teaser' ? 'teaser' : ''}">
+    <h2 class="structure-name">
+        <a href="#">${_structure.name}</a>
+    </h2>
+    <div class="structure-metadata">
+    	#{if _as != 'full'}
+    	<span class="structure-height">Height: ${_structure.height}'</span>
+    	<span class="structure-width">Width: ${_structure.width}'</span>
+    	#{/if}
+    </div>
+    #{if _as != 'teaser'} #{/if}
+</div>

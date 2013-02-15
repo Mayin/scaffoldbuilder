@@ -3,12 +3,12 @@ Structure(primera):
  height: 40
  width: 50
 
- Structure(segunda):
+Structure(segunda):
  name: segunda estructura
  height: 40
  width: 50
 
- Structure(tercera):
+Structure(tercera):
  name: tercera estructura
  height: 40
  width: 50
