@@ -1,14 +1,51 @@
-*{ Display a structure in one of these modes: 'full', 'home' or 'teaser' }*
- 
 <div class="structure ${_as == 'teaser' ? 'teaser' : ''}">
     <h2 class="structure-name">
-        <a href="#">${_structure.name}</a>
+        <a href="@{Application.show(_structure.id)}">${_structure.name}</a>
     </h2>
     <div class="structure-metadata">
-    	#{if _as != 'full'}
     	<span class="structure-height">Height: ${_structure.height}'</span>
     	<span class="structure-width">Width: ${_structure.width}'</span>
-    	#{/if}
+    	</br>
+    	pieces</br>
+    	vert: ${_structure.numOfVert} horz: ${_structure.numOfHorz} </br>
     </div>
-    #{if _as != 'teaser'} #{/if}
 </div>
+    </br></br>
+    <div class="scaffolding">
+    	#{list items:_structure.numOfVert..1, as:'j'}
+	    	#{list items:1.._structure.numOfHorz, as:'i'}
+	    		
+	    		#{if j == 1}
+		    		<img src="@{'/public/images/1.gif'}" width="50" height="50" />
+	    		#{/if}
+	    		
+	    		#{if j == _structure.numOfVert && i == 1}
+		    		<img src="@{'/public/images/5.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		#{if j == _structure.numOfVert && i == _structure.numOfHorz}
+		    		<img src="@{'/public/images/7.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		#{if j == _structure.numOfVert && i != _structure.numOfHorz && i != 1}
+		    		<img src="@{'/public/images/6.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		#{if i == 1 && j != 1 && j != _structure.numOfVert}
+		    		<img src="@{'/public/images/2.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		#{if i == _structure.numOfHorz && j != 1 && j != _structure.numOfVert}
+		    		<img src="@{'/public/images/4.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		#{if i != _structure.numOfHorz && i != 1 && j != 1 && j != _structure.numOfVert}
+		    		<img src="@{'/public/images/3.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		<!-- j${j} i${i} -->
+	    		
+	    	#{/list}
+			</br>
+    	#{/list}
+    </div>

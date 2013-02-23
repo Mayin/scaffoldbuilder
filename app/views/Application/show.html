@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:structure.name /}
+ 
+ <!-- 
+ <ul id="pagination">
+    #{if structure.previous()}
+        <li id="previous">
+            <a href="@{Application.show(structure.previous().id)}">
+                ${structure.previous().name}
+            </a>
+        </li>
+    #{/if}
+    #{if structure.next()}
+        <li id="next">
+            <a href="@{Application.show(structure.next().id)}">
+                ${structure.next().title}
+            </a>
+        </li>
+    #{/if}
+</ul>
+-->
+
+#{display structure:structure, as:'full' /}

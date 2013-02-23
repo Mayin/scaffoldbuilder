@@ -5,10 +5,16 @@ Structure(primera):
 
 Structure(segunda):
  name: segunda estructura
- height: 40
- width: 50
+ height: 60
+ width: 38
 
 Structure(tercera):
  name: tercera estructura
  height: 40
  width: 50
+
+Structure(cuarta):
+ name: cuarta estructura
+ height: 147
+ width: 47
+ 
