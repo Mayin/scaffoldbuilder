@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Administration</title>		
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        #{get 'moreStyles' /}	
+        <link rel="stylesheet" type="text/css" media="screen" 
+                href="@{'/public/stylesheets/crud.css'}" />
+        <link rel="shortcut icon" type="image/png" 
+                href="@{'/public/images/favicon.png'}" />
+        <script src="@{'/public/javascripts/jquery-1.4.2.min.js'}"></script>
+        <script src="@{'/public/javascripts/jquery.tools-1.2.5.toolbox.expose.min.js'}"></script>
+		<!-- <script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-77494-10']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script> -->        
+    </head>
+    <body id=crud>
+        
+        <div id="crudHeader">
+            <h1><a href="">Scaffold Builder Administration</a></h1>
+        </div>
+        
+        <div id="crudcontent">
+		    <ul id="crudListTable">
+		        #{secure.check 'admin'}
+		            <li class="${request.controller == 'Companies' ? 'selected' : ''}">
+		                <a href="@{Companies.list()}">Companies</a>
+		            </li>
+		        #{/secure.check}
+		            <li class="${request.controller == 'Users' ? 'selected' : ''}">
+		                <a href="@{Users.list()}">Users</a>
+		            </li>
+		            <li class="${request.controller == 'Structures' ? 'selected' : ''}">
+		                <a href="@{Structures.list()}">Structures</a>
+		            </li>
+		    </ul>
+		</div>
+        
+         <div id="crudFooter">
+            <a href="@{Secure.logout()}">Log out</a>
+        </div>
+        
+    </body>
+</html>

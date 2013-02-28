@@ -3,12 +3,30 @@ Structure(primera):
  height: 40
  width: 50
 
- Structure(segunda):
+Structure(segunda):
  name: segunda estructura
- height: 40
- width: 50
+ height: 60
+ width: 38
 
- Structure(tercera):
+Structure(tercera):
  name: tercera estructura
  height: 40
  width: 50
+
+Structure(cuarta):
+ name: cuarta estructura
+ height: 147
+ width: 47
+ 
+ Company(macpaint):
+  name: Macpaint
+  
+ User(mario):
+  firstname: Mario
+  lastname: Talavera
+  email: mario.talavera@gmail.com
+  password: secret
+  isAdmin: true
+  company: macpaint
+  
+ 

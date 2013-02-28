@@ -18,3 +18,13 @@ Structure(cuarta):
  height: 147
  width: 47
  
+Company(macpaint):
+ name: Macpaint
+
+User(mario):
+ firstname: Mario
+ lastname: Talavera
+ email: mario.talavera@gmail.com
+ password: secret
+ isAdmin: true
+ company: macpaint

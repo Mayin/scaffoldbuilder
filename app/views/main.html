@@ -4,27 +4,19 @@
     <head>
         <title>#{get 'title' /}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        <!-- this is style for regular, not admin, site -->
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/crud.css'}">
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
     </head>
-    <body>
-	    <div id="header">
-	    	<div id="logo">scaffold builder</div>
-	    	<ul id="tools">
-	    		<li><a href="#">Log in to build!</a></li>
-	    	</ul>
-	    	<div id="title">
-	    		<span class="about">About this app</span>
-	    		<h1><a href="@{Application.index()}">${apptitle}</a></h1>
-	    		<h2>${appbaseline}</h2>
+    <body id="crud">
+	    <div id="crudHeader">
+	    	<h1><a href="@{Application.index()}">${apptitle}</a></h1></div>
+    		<h2>${appbaseline}</h2>
 	    	</div>
 	    </div>
-	    <div id="main">
-	        #{doLayout /}
-	    </div>
 	    
-	    <p id="footer">
-	    	This is the app that there is not much to.
-	    </p>
+         <div id="crudFooter">
+            <a href="@{Secure.login()}">Log in</a>
+        </div>
     </body>
 </html>

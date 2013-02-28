@@ -30,5 +30,11 @@ public class Structure extends Model {
 	public Structure next() {
 		return Structure.find("postedAt > ? order by postedAt desc", postedAt).first();
 	}
+
+	public String toString() {
+	    return name;
+	}
+	
+
 }
 
