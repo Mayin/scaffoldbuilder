@@ -28,3 +28,11 @@ User(mario):
  password: secret
  isAdmin: true
  company: macpaint
+
+User(carmen):
+ firstname: Carmen
+ lastname: Arias
+ email: carmen.arias@gmail.com
+ password: secret
+ isAdmin: false
+ company: macpaint

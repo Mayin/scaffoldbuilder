@@ -1,0 +1,60 @@
+#{extends 'CRUD/layout.html' /}
+
+#{set title:messages.get('crud.list.title', type.name) /}
+
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bam.css'}">
+
+<div id="crudShow" class="${type.name}">
+    <h2 id="crudListTitle">&{'crud.list.title', structure.name}</h2>
+
+	<div align="center"> <a href="@{Structures.show(structure.id)}">Back</a></div>
+
+	<div class="structure-metadata">
+		<span class="structure-height">Height: ${structure.height}'</span>
+		<span class="structure-width">Width: ${structure.width}'</span>
+		</br>
+		pieces</br>
+		vert: ${structure.numOfVert} horz: ${structure.numOfHorz} </br>
+	</div>
+	
+	</br>
+    <div class="scaffolding">
+    	#{list items:structure.numOfVert..1, as:'j'}
+	    	#{list items:1..structure.numOfHorz, as:'i'}
+	    		
+	    		#{if j == 1}
+		    		<img src="@{'/public/images/1.gif'}" width="50" height="50" />
+	    		#{/if}
+	    		
+	    		#{if j == structure.numOfVert && i == 1}
+		    		<img src="@{'/public/images/5.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		#{if j == structure.numOfVert && i == structure.numOfHorz}
+		    		<img src="@{'/public/images/7.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		#{if j == structure.numOfVert && i != structure.numOfHorz && i != 1}
+		    		<img src="@{'/public/images/6.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		#{if i == 1 && j != 1 && j != structure.numOfVert}
+		    		<img src="@{'/public/images/2.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		#{if i == structure.numOfHorz && j != 1 && j != structure.numOfVert}
+		    		<img src="@{'/public/images/4.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		#{if i != structure.numOfHorz && i != 1 && j != 1 && j != structure.numOfVert}
+		    		<img src="@{'/public/images/3.gif'}" width="50" height="50" />
+	    		#{/if}
+
+	    		<!-- j${j} i${i} -->
+	    		
+	    	#{/list}
+			</br>
+    	#{/list}
+    </div>
+</div>
+    

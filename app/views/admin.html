@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         #{get 'moreStyles' /}	
         <link rel="stylesheet" type="text/css" media="screen" 
-                href="@{'/public/stylesheets/crud.css'}" />
+                href="@{'/public/stylesheets/bam.css'}" />
         <link rel="shortcut icon" type="image/png" 
                 href="@{'/public/images/favicon.png'}" />
         <script src="@{'/public/javascripts/jquery-1.4.2.min.js'}"></script>
@@ -33,10 +33,10 @@
 		            <li class="${request.controller == 'Companies' ? 'selected' : ''}">
 		                <a href="@{Companies.list()}">Companies</a>
 		            </li>
-		        #{/secure.check}
 		            <li class="${request.controller == 'Users' ? 'selected' : ''}">
 		                <a href="@{Users.list()}">Users</a>
 		            </li>
+		        #{/secure.check}
 		            <li class="${request.controller == 'Structures' ? 'selected' : ''}">
 		                <a href="@{Structures.list()}">Structures</a>
 		            </li>

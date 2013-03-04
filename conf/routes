@@ -11,15 +11,18 @@ GET     /favicon.ico                            404
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
+GET		/crud/index								Admin.index
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
 
-# Perrty urls
-GET		/structures/{id}						Application.show
+# GET		/structures/{id}						Application.show
+
+GET			/structures/draw/{id}				Structures.draw
 
 # Administration
 GET     /admin/?                                Admin.index
-*		/admin									module:crud
+# *		/admin									module:crud
 
 # Import Secure routes
 *       /                                       module:secure

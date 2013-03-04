@@ -19,12 +19,7 @@ public class User extends Model {
 	@Required
 	public String password;
 	public boolean isAdmin;
-//	@OneToMany(cascade=CascadeType.ALL, mappedBy="user")
-//	public List<Location> locations = new ArrayList<Location>();
-	
-//	@OneToMany(cascade=CascadeType.ALL, mappedBy="user")
-//	public List<Shipment> shipments = new ArrayList<Shipment>();
-	
+
 	@ManyToOne //(cascade=CascadeType.REFRESH, optional=true)
 	public Company company;
 	

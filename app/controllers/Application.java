@@ -24,12 +24,12 @@ public class Application extends Controller {
         render(frontStructure, olderStructures);
     }
     
-    public static void show(Long id) {
-    	Structure structure = Structure.findById(id);
-    	
-    	structure.numOfHorz = structure.width / 10;
-    	structure.numOfVert = structure.height / 10;
-    	render(structure);
-    }
+//    public static void show(Long id) {
+//    	Structure structure = Structure.findById(id);
+//    	
+//    	structure.numOfHorz = structure.width / 10;
+//    	structure.numOfVert = structure.height / 10;
+//    	render(structure);
+//    }
 
 }

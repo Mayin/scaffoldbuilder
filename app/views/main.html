@@ -5,18 +5,19 @@
         <title>#{get 'title' /}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <!-- this is style for regular, not admin, site -->
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/crud.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bam.css'}">
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
     </head>
     <body id="crud">
 	    <div id="crudHeader">
 	    	<h1><a href="@{Application.index()}">${apptitle}</a></h1></div>
-    		<h2>${appbaseline}</h2>
+	    	</br> <a href="@{Secure.login()}">Log in</a>
+
 	    	</div>
 	    </div>
+	                #{doLayout /} 
 	    
          <div id="crudFooter">
-            <a href="@{Secure.login()}">Log in</a>
         </div>
     </body>
 </html>
