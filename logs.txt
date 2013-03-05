@@ -1,0 +1,101 @@
+2013-03-05T00:11:53+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T00:12:01+00:00 heroku[web.1]: Starting process with command `play run --http.port=41558 --%prod -Dprecompiled=true`
+2013-03-05T00:12:02+00:00 app[web.1]: Listening for transport dt_socket at address: 8000
+2013-03-05T00:12:02+00:00 heroku[web.1]: Error R11 (Bad bind) -> Process bound to port 8000, should be 41558 (see environment variable PORT)
+2013-03-05T00:12:02+00:00 heroku[web.1]: Stopping process with SIGKILL
+2013-03-05T00:12:04+00:00 heroku[web.1]: Process exited with status 137
+2013-03-05T00:12:04+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T00:22:00+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T00:22:05+00:00 heroku[web.1]: Starting process with command `play run --http.port=18573 --%prod -Dprecompiled=true`
+2013-03-05T00:22:07+00:00 app[web.1]: Listening for transport dt_socket at address: 8000
+2013-03-05T00:22:07+00:00 heroku[web.1]: Error R11 (Bad bind) -> Process bound to port 8000, should be 18573 (see environment variable PORT)
+2013-03-05T00:22:07+00:00 heroku[web.1]: Stopping process with SIGKILL
+2013-03-05T00:22:08+00:00 heroku[web.1]: Process exited with status 137
+2013-03-05T00:22:08+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T00:30:18+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
+2013-03-05T00:30:18+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
+2013-03-05T00:32:32+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T00:32:37+00:00 heroku[web.1]: Starting process with command `play run --http.port=26203 --%prod -Dprecompiled=true`
+2013-03-05T00:32:39+00:00 app[web.1]: Listening for transport dt_socket at address: 8000
+2013-03-05T00:32:39+00:00 heroku[web.1]: Error R11 (Bad bind) -> Process bound to port 8000, should be 26203 (see environment variable PORT)
+2013-03-05T00:32:39+00:00 heroku[web.1]: Stopping process with SIGKILL
+2013-03-05T00:32:41+00:00 heroku[web.1]: Process exited with status 137
+2013-03-05T00:32:41+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T00:42:44+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T00:42:48+00:00 heroku[web.1]: Starting process with command `play run --http.port=36921 --%prod -Dprecompiled=true`
+2013-03-05T00:42:49+00:00 app[web.1]: Listening for transport dt_socket at address: 8000
+2013-03-05T00:42:49+00:00 app[web.1]: 00:42:49,512 INFO  ~ Starting /app
+2013-03-05T00:42:49+00:00 app[web.1]: 00:42:49,517 INFO  ~ Module secure is available (/app/modules/secure)
+2013-03-05T00:42:49+00:00 app[web.1]: 00:42:49,518 INFO  ~ Module crud is available (/app/modules/crud)
+2013-03-05T00:42:49+00:00 app[web.1]: 00:42:49,728 INFO  ~ Application is precompiled
+2013-03-05T00:42:49+00:00 heroku[web.1]: Stopping process with SIGKILL
+2013-03-05T00:42:49+00:00 heroku[web.1]: Error R11 (Bad bind) -> Process bound to port 8000, should be 36921 (see environment variable PORT)
+2013-03-05T00:42:51+00:00 heroku[web.1]: Process exited with status 137
+2013-03-05T00:42:51+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T00:52:49+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T00:52:53+00:00 heroku[web.1]: Starting process with command `play run --http.port=33338 --%prod -Dprecompiled=true`
+2013-03-05T00:52:55+00:00 app[web.1]: Listening for transport dt_socket at address: 8000
+2013-03-05T00:52:56+00:00 app[web.1]: 00:52:56,617 INFO  ~ Starting /app
+2013-03-05T00:52:56+00:00 app[web.1]: 00:52:56,637 INFO  ~ Module crud is available (/app/modules/crud)
+2013-03-05T00:52:56+00:00 app[web.1]: 00:52:56,653 INFO  ~ Module secure is available (/app/modules/secure)
+2013-03-05T00:52:57+00:00 heroku[web.1]: Error R11 (Bad bind) -> Process bound to port 8000, should be 33338 (see environment variable PORT)
+2013-03-05T00:52:57+00:00 heroku[web.1]: Stopping process with SIGKILL
+2013-03-05T00:52:58+00:00 heroku[web.1]: Process exited with status 137
+2013-03-05T00:52:58+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T01:02:58+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T01:03:02+00:00 heroku[web.1]: Starting process with command `play run --http.port=37676 --%prod -Dprecompiled=true`
+2013-03-05T01:03:03+00:00 app[web.1]: Listening for transport dt_socket at address: 8000
+2013-03-05T01:03:04+00:00 app[web.1]: 01:03:04,028 INFO  ~ Starting /app
+2013-03-05T01:03:04+00:00 app[web.1]: 01:03:04,032 INFO  ~ Module secure is available (/app/modules/secure)
+2013-03-05T01:03:04+00:00 app[web.1]: 01:03:04,035 INFO  ~ Module crud is available (/app/modules/crud)
+2013-03-05T01:03:04+00:00 app[web.1]: 01:03:04,199 INFO  ~ Application is precompiled
+2013-03-05T01:03:04+00:00 heroku[web.1]: Stopping process with SIGKILL
+2013-03-05T01:03:04+00:00 heroku[web.1]: Error R11 (Bad bind) -> Process bound to port 8000, should be 37676 (see environment variable PORT)
+2013-03-05T01:03:05+00:00 heroku[web.1]: Process exited with status 137
+2013-03-05T01:03:05+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T01:13:32+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T01:13:39+00:00 heroku[web.1]: Starting process with command `play run --http.port=53157 --%prod -Dprecompiled=true`
+2013-03-05T01:13:42+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T01:13:40+00:00 app[web.1]: Listening for transport dt_socket at address: 8000
+2013-03-05T01:13:40+00:00 heroku[web.1]: Stopping process with SIGKILL
+2013-03-05T01:13:40+00:00 heroku[web.1]: Error R11 (Bad bind) -> Process bound to port 8000, should be 53157 (see environment variable PORT)
+2013-03-05T01:13:42+00:00 heroku[web.1]: Process exited with status 137
+2013-03-05T01:23:30+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
+2013-03-05T01:23:43+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T01:23:47+00:00 heroku[web.1]: Starting process with command `play run --http.port=28791 --%prod -Dprecompiled=true`
+2013-03-05T01:23:48+00:00 app[web.1]: Listening for transport dt_socket at address: 8000
+2013-03-05T01:23:48+00:00 heroku[web.1]: Stopping process with SIGKILL
+2013-03-05T01:23:48+00:00 heroku[web.1]: Error R11 (Bad bind) -> Process bound to port 8000, should be 28791 (see environment variable PORT)
+2013-03-05T01:23:50+00:00 heroku[web.1]: Process exited with status 137
+2013-03-05T01:23:50+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T01:34:12+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T01:34:18+00:00 heroku[web.1]: Starting process with command `play run --http.port=18216 --%prod -Dprecompiled=true`
+2013-03-05T01:34:20+00:00 app[web.1]: Listening for transport dt_socket at address: 8000
+2013-03-05T01:34:21+00:00 app[web.1]: 01:34:21,657 INFO  ~ Starting /app
+2013-03-05T01:34:21+00:00 app[web.1]: 01:34:21,677 INFO  ~ Module secure is available (/app/modules/secure)
+2013-03-05T01:34:21+00:00 app[web.1]: 01:34:21,667 INFO  ~ Module crud is available (/app/modules/crud)
+2013-03-05T01:34:22+00:00 app[web.1]: 01:34:22,135 INFO  ~ Application is precompiled
+2013-03-05T01:34:24+00:00 app[web.1]: 01:34:24,390 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL
+2013-03-05T01:34:29+00:00 app[web.1]: 01:34:29,059 INFO  ~ Application 'scaffoldBuilder' is now started !
+2013-03-05T01:34:29+00:00 heroku[web.1]: Error R11 (Bad bind) -> Process bound to port 8000, should be 18216 (see environment variable PORT)
+2013-03-05T01:34:29+00:00 heroku[web.1]: Stopping process with SIGKILL
+2013-03-05T01:34:30+00:00 heroku[web.1]: Process exited with status 137
+2013-03-05T01:34:30+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T01:44:23+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T01:44:28+00:00 heroku[web.1]: Starting process with command `play run --http.port=31790 --%prod -Dprecompiled=true`
+2013-03-05T01:44:28+00:00 app[web.1]: Listening for transport dt_socket at address: 8000
+2013-03-05T01:44:28+00:00 heroku[web.1]: Error R11 (Bad bind) -> Process bound to port 8000, should be 31790 (see environment variable PORT)
+2013-03-05T01:44:28+00:00 heroku[web.1]: Stopping process with SIGKILL
+2013-03-05T01:44:30+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T01:44:30+00:00 heroku[web.1]: Process exited with status 137
+2013-03-05T01:54:34+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T01:54:42+00:00 heroku[web.1]: Starting process with command `play run --http.port=15349 --%prod -Dprecompiled=true`
+2013-03-05T01:54:44+00:00 app[web.1]: Listening for transport dt_socket at address: 8000
+2013-03-05T01:54:44+00:00 app[web.1]: 01:54:44,874 INFO  ~ Starting /app
+2013-03-05T01:54:44+00:00 app[web.1]: 01:54:44,879 INFO  ~ Module secure is available (/app/modules/secure)
+2013-03-05T01:54:44+00:00 app[web.1]: 01:54:44,881 INFO  ~ Module crud is available (/app/modules/crud)
+2013-03-05T01:54:45+00:00 app[web.1]: 01:54:45,050 INFO  ~ Application is precompiled
+2013-03-05T01:54:45+00:00 heroku[web.1]: Error R11 (Bad bind) -> Process bound to port 8000, should be 15349 (see environment variable PORT)
+2013-03-05T01:54:45+00:00 heroku[web.1]: Stopping process with SIGKILL
+2013-03-05T01:54:47+00:00 heroku[web.1]: Process exited with status 137
+2013-03-05T01:54:47+00:00 heroku[web.1]: State changed from starting to crashed
