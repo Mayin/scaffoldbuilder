@@ -1,101 +1,101 @@
-2013-03-05T02:14:41+00:00 heroku[slugc]: Slug compilation started
-2013-03-05T02:15:16+00:00 heroku[api]: Release v8 created by mario.talavera@gmail.com
-2013-03-05T02:15:16+00:00 heroku[api]: Deploy dafca4b by mario.talavera@gmail.com
-2013-03-05T02:15:17+00:00 heroku[slugc]: Slug compilation finished
-2013-03-05T02:15:19+00:00 heroku[web.1]: State changed from crashed to starting
-2013-03-05T02:15:16+00:00 heroku[web.1]: State changed from crashed to starting
-2013-03-05T02:15:22+00:00 heroku[web.1]: Starting process with command `play run --http.port=4507 --%prod -Dprecompiled=true`
-2013-03-05T02:15:25+00:00 app[web.1]: WARNING: Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
-2013-03-05T02:15:25+00:00 app[web.1]: Mar 5, 2013 2:15:25 AM play.Logger warn
-2013-03-05T02:15:26+00:00 app[web.1]: 02:15:26,527 INFO  ~ Starting /app
-2013-03-05T02:15:26+00:00 app[web.1]: 02:15:26,532 INFO  ~ Module crud is available (/app/modules/crud)
-2013-03-05T02:15:26+00:00 app[web.1]: 02:15:26,533 INFO  ~ Module secure is available (/app/modules/secure)
-2013-03-05T02:15:27+00:00 app[web.1]: 02:15:27,321 INFO  ~ Application is precompiled
-2013-03-05T02:15:27+00:00 app[web.1]: 02:15:27,582 WARN  ~ Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
-2013-03-05T02:15:28+00:00 app[web.1]: 02:15:28,952 ERROR ~ 
-2013-03-05T02:15:28+00:00 app[web.1]: 
-2013-03-05T02:15:28+00:00 app[web.1]: @6dgb106no
-2013-03-05T02:15:28+00:00 app[web.1]: Can't start in PROD mode with errors
-2013-03-05T02:15:28+00:00 app[web.1]: 
-2013-03-05T02:15:28+00:00 app[web.1]: JPA error
-2013-03-05T02:15:28+00:00 app[web.1]: A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
-2013-03-05T02:15:28+00:00 app[web.1]: 
-2013-03-05T02:15:28+00:00 app[web.1]: play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
-2013-03-05T02:15:28+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
-2013-03-05T02:15:28+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
-2013-03-05T02:15:28+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
-2013-03-05T02:15:28+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
-2013-03-05T02:15:28+00:00 app[web.1]: 	... 5 more
-2013-03-05T02:15:28+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
-2013-03-05T02:15:28+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
-2013-03-05T02:15:28+00:00 app[web.1]: Exception in thread "main" play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
-2013-03-05T02:15:28+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
-2013-03-05T02:15:28+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
-2013-03-05T02:15:28+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
-2013-03-05T02:15:28+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
-2013-03-05T02:15:28+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
-2013-03-05T02:15:28+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
-2013-03-05T02:15:28+00:00 app[web.1]: 	... 5 more
-2013-03-05T02:15:28+00:00 app[web.1]: ~        _            _ 
-2013-03-05T02:15:28+00:00 app[web.1]: ~ | '_ \| |/ _' | || |_|
-2013-03-05T02:15:28+00:00 app[web.1]: ~ |  __/|_|\____|\__ (_)
-2013-03-05T02:15:28+00:00 app[web.1]: ~ play! 1.2.4, http://www.playframework.org
-2013-03-05T02:15:28+00:00 app[web.1]: ~  _ __ | | __ _ _  _| |
-2013-03-05T02:15:28+00:00 app[web.1]: ~ |_|            |__/   
-2013-03-05T02:15:28+00:00 app[web.1]: ~
-2013-03-05T02:15:28+00:00 app[web.1]: ~ Ctrl+C to stop
-2013-03-05T02:15:28+00:00 app[web.1]: ~ framework ID is prod
-2013-03-05T02:15:28+00:00 app[web.1]: ~ 
-2013-03-05T02:15:28+00:00 app[web.1]: ~
-2013-03-05T02:15:28+00:00 app[web.1]: 
-2013-03-05T02:15:30+00:00 heroku[web.1]: Process exited with status 0
-2013-03-05T02:15:30+00:00 heroku[web.1]: State changed from starting to crashed
-2013-03-05T02:15:30+00:00 heroku[web.1]: State changed from crashed to starting
-2013-03-05T02:15:37+00:00 heroku[web.1]: Starting process with command `play run --http.port=19569 --%prod -Dprecompiled=true`
-2013-03-05T02:15:39+00:00 app[web.1]: Mar 5, 2013 2:15:39 AM play.Logger warn
-2013-03-05T02:15:39+00:00 app[web.1]: WARNING: Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
-2013-03-05T02:15:39+00:00 app[web.1]: 02:15:39,437 INFO  ~ Starting /app
-2013-03-05T02:15:39+00:00 app[web.1]: 02:15:39,439 INFO  ~ Module crud is available (/app/modules/crud)
-2013-03-05T02:15:39+00:00 app[web.1]: 02:15:39,440 INFO  ~ Module secure is available (/app/modules/secure)
-2013-03-05T02:15:39+00:00 app[web.1]: 02:15:39,723 INFO  ~ Application is precompiled
-2013-03-05T02:15:39+00:00 app[web.1]: 02:15:39,847 WARN  ~ Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
-2013-03-05T02:15:40+00:00 app[web.1]: Can't start in PROD mode with errors
-2013-03-05T02:15:40+00:00 app[web.1]: 
-2013-03-05T02:15:40+00:00 app[web.1]: A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
-2013-03-05T02:15:40+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
-2013-03-05T02:15:40+00:00 app[web.1]: 02:15:40,600 ERROR ~ 
-2013-03-05T02:15:40+00:00 app[web.1]: 
-2013-03-05T02:15:40+00:00 app[web.1]: @6dgb10o3l
-2013-03-05T02:15:40+00:00 app[web.1]: 
-2013-03-05T02:15:40+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
-2013-03-05T02:15:40+00:00 app[web.1]: 	... 5 more
-2013-03-05T02:15:40+00:00 app[web.1]: Exception in thread "main" play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
-2013-03-05T02:15:40+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
-2013-03-05T02:15:40+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
-2013-03-05T02:15:40+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
-2013-03-05T02:15:40+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
-2013-03-05T02:15:40+00:00 app[web.1]: JPA error
-2013-03-05T02:15:40+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
-2013-03-05T02:15:40+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
-2013-03-05T02:15:40+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
-2013-03-05T02:15:40+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
-2013-03-05T02:15:40+00:00 app[web.1]: play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
-2013-03-05T02:15:40+00:00 app[web.1]: 	... 5 more
-2013-03-05T02:15:40+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
-2013-03-05T02:15:40+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
-2013-03-05T02:15:41+00:00 app[web.1]: ~        _            _ 
-2013-03-05T02:15:41+00:00 app[web.1]: ~ | '_ \| |/ _' | || |_|
-2013-03-05T02:15:41+00:00 app[web.1]: ~ |_|            |__/   
-2013-03-05T02:15:41+00:00 app[web.1]: ~  _ __ | | __ _ _  _| |
-2013-03-05T02:15:41+00:00 app[web.1]: ~
-2013-03-05T02:15:41+00:00 app[web.1]: ~ play! 1.2.4, http://www.playframework.org
-2013-03-05T02:15:41+00:00 app[web.1]: ~
-2013-03-05T02:15:41+00:00 app[web.1]: ~ Ctrl+C to stop
-2013-03-05T02:15:41+00:00 app[web.1]: 
-2013-03-05T02:15:41+00:00 app[web.1]: ~ |  __/|_|\____|\__ (_)
-2013-03-05T02:15:41+00:00 app[web.1]: ~ framework ID is prod
-2013-03-05T02:15:41+00:00 app[web.1]: ~ 
-2013-03-05T02:15:45+00:00 heroku[web.1]: Process exited with status 0
-2013-03-05T02:15:45+00:00 heroku[web.1]: State changed from starting to crashed
-2013-03-05T02:15:47+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
-2013-03-05T02:15:47+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
+2013-03-06T01:42:51+00:00 app[web.1]: WARNING: Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
+2013-03-06T01:42:51+00:00 app[web.1]: 01:42:51,817 INFO  ~ Starting /app
+2013-03-06T01:42:51+00:00 app[web.1]: 01:42:51,821 INFO  ~ Module secure is available (/app/modules/secure)
+2013-03-06T01:42:51+00:00 app[web.1]: 01:42:51,828 INFO  ~ Module crud is available (/app/modules/crud)
+2013-03-06T01:42:52+00:00 app[web.1]: 01:42:52,053 INFO  ~ Application is precompiled
+2013-03-06T01:42:52+00:00 app[web.1]: 01:42:52,107 WARN  ~ Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
+2013-03-06T01:42:52+00:00 app[web.1]: Can't start in PROD mode with errors
+2013-03-06T01:42:52+00:00 app[web.1]: 01:42:52,450 ERROR ~ 
+2013-03-06T01:42:52+00:00 app[web.1]: JPA error
+2013-03-06T01:42:52+00:00 app[web.1]: play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+2013-03-06T01:42:52+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+2013-03-06T01:42:52+00:00 app[web.1]: 
+2013-03-06T01:42:52+00:00 app[web.1]: 
+2013-03-06T01:42:52+00:00 app[web.1]: @6dgi3kj8l
+2013-03-06T01:42:52+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
+2013-03-06T01:42:52+00:00 app[web.1]: 	... 5 more
+2013-03-06T01:42:52+00:00 app[web.1]: A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
+2013-03-06T01:42:52+00:00 app[web.1]: Exception in thread "main" play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+2013-03-06T01:42:52+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
+2013-03-06T01:42:52+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+2013-03-06T01:42:52+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
+2013-03-06T01:42:52+00:00 app[web.1]: 
+2013-03-06T01:42:52+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+2013-03-06T01:42:52+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
+2013-03-06T01:42:52+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
+2013-03-06T01:42:52+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
+2013-03-06T01:42:52+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+2013-03-06T01:42:52+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
+2013-03-06T01:42:52+00:00 app[web.1]: 	... 5 more
+2013-03-06T01:42:52+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
+2013-03-06T01:42:52+00:00 app[web.1]: ~  _ __ | | __ _ _  _| |
+2013-03-06T01:42:52+00:00 app[web.1]: ~        _            _ 
+2013-03-06T01:42:52+00:00 app[web.1]: ~ |  __/|_|\____|\__ (_)
+2013-03-06T01:42:52+00:00 app[web.1]: ~ |_|            |__/   
+2013-03-06T01:42:52+00:00 app[web.1]: ~ | '_ \| |/ _' | || |_|
+2013-03-06T01:42:52+00:00 app[web.1]: ~ play! 1.2.4, http://www.playframework.org
+2013-03-06T01:42:52+00:00 app[web.1]: ~ framework ID is prod
+2013-03-06T01:42:52+00:00 app[web.1]: ~
+2013-03-06T01:42:52+00:00 app[web.1]: ~
+2013-03-06T01:42:52+00:00 app[web.1]: ~ Ctrl+C to stop
+2013-03-06T01:42:52+00:00 app[web.1]: ~ 
+2013-03-06T01:42:52+00:00 app[web.1]: 
+2013-03-06T01:42:53+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-06T01:42:53+00:00 heroku[web.1]: Process exited with status 0
+2013-03-06T01:42:57+00:00 heroku[api]: Add DATABASE_URL config by mario.talavera@gmail.com
+2013-03-06T01:42:57+00:00 heroku[api]: Release v9 created by mario.talavera@gmail.com
+2013-03-06T01:42:57+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-06T01:43:01+00:00 heroku[web.1]: Starting process with command `play run --http.port=22750 --%prod -Dprecompiled=true`
+2013-03-06T01:43:03+00:00 app[web.1]: Mar 6, 2013 1:43:03 AM play.Logger warn
+2013-03-06T01:43:03+00:00 app[web.1]: WARNING: Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
+2013-03-06T01:43:03+00:00 app[web.1]: 01:43:03,975 INFO  ~ Starting /app
+2013-03-06T01:43:03+00:00 app[web.1]: 01:43:03,981 INFO  ~ Module secure is available (/app/modules/secure)
+2013-03-06T01:43:03+00:00 app[web.1]: 01:43:03,982 INFO  ~ Module crud is available (/app/modules/crud)
+2013-03-06T01:43:05+00:00 app[web.1]: 01:43:05,695 INFO  ~ Application is precompiled
+2013-03-06T01:43:05+00:00 app[web.1]: 01:43:05,807 WARN  ~ Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
+2013-03-06T01:43:06+00:00 app[web.1]: 01:43:06,275 ERROR ~ 
+2013-03-06T01:43:06+00:00 app[web.1]: 
+2013-03-06T01:43:06+00:00 app[web.1]: @6dgi3ldke
+2013-03-06T01:43:06+00:00 app[web.1]: Can't start in PROD mode with errors
+2013-03-06T01:43:06+00:00 app[web.1]: 
+2013-03-06T01:43:06+00:00 app[web.1]: JPA error
+2013-03-06T01:43:06+00:00 app[web.1]: A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
+2013-03-06T01:43:06+00:00 app[web.1]: 
+2013-03-06T01:43:06+00:00 app[web.1]: play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+2013-03-06T01:43:06+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+2013-03-06T01:43:06+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+2013-03-06T01:43:06+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
+2013-03-06T01:43:06+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
+2013-03-06T01:43:06+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
+2013-03-06T01:43:06+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
+2013-03-06T01:43:06+00:00 app[web.1]: 	... 5 more
+2013-03-06T01:43:06+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+2013-03-06T01:43:06+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
+2013-03-06T01:43:06+00:00 app[web.1]: Exception in thread "main" play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+2013-03-06T01:43:06+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
+2013-03-06T01:43:06+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
+2013-03-06T01:43:06+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
+2013-03-06T01:43:06+00:00 app[web.1]: 	... 5 more
+2013-03-06T01:43:06+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+2013-03-06T01:43:06+00:00 app[web.1]: ~
+2013-03-06T01:43:06+00:00 app[web.1]: ~ play! 1.2.4, http://www.playframework.org
+2013-03-06T01:43:06+00:00 app[web.1]: ~  _ __ | | __ _ _  _| |
+2013-03-06T01:43:06+00:00 app[web.1]: ~
+2013-03-06T01:43:06+00:00 app[web.1]: ~ Ctrl+C to stop
+2013-03-06T01:43:06+00:00 app[web.1]: ~ |_|            |__/   
+2013-03-06T01:43:06+00:00 app[web.1]: ~ |  __/|_|\____|\__ (_)
+2013-03-06T01:43:06+00:00 app[web.1]: ~ framework ID is prod
+2013-03-06T01:43:06+00:00 app[web.1]: ~ | '_ \| |/ _' | || |_|
+2013-03-06T01:43:06+00:00 app[web.1]: ~        _            _ 
+2013-03-06T01:43:06+00:00 app[web.1]: ~ 
+2013-03-06T01:43:06+00:00 app[web.1]: 
+2013-03-06T01:43:07+00:00 heroku[web.1]: Process exited with status 0
+2013-03-06T01:43:07+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-06T01:44:29+00:00 heroku[slugc]: Slug compilation started
+2013-03-06T01:45:17+00:00 heroku[api]: Release v10 created by mario.talavera@gmail.com
+2013-03-06T01:45:17+00:00 heroku[api]: Deploy 1db781d by mario.talavera@gmail.com
+2013-03-06T01:45:18+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-06T01:45:18+00:00 heroku[slugc]: Slug compilation finished
+2013-03-06T01:45:26+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-06T01:45:30+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
+2013-03-06T01:45:31+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
