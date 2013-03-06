@@ -2,5 +2,5 @@
 
 require:
 	- play 1.2.5
-    - play -> crud
-    - play -> secure
+    - play 1.2.5 -> crud
+    - play 1.2.5 -> secure
