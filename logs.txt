@@ -1,101 +1,101 @@
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.message.DbException.get(DbException.java:167)
-2013-03-05T02:04:24+00:00 app[web.1]: select count(*) as col_0_0_ from Structure structure0_ limit ? [42102-149]
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.message.DbException.get(DbException.java:144)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.readTableFilter(Parser.java:1020)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.readTableOrView(Parser.java:4563)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1622)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parseSelectSimple(Parser.java:1729)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parseSelectSub(Parser.java:1616)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parseSelect(Parser.java:1449)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parseSelectUnion(Parser.java:1461)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parsePrepared(Parser.java:401)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parse(Parser.java:275)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parse(Parser.java:247)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.prepare(Parser.java:201)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.prepareCommand(Parser.java:214)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.engine.Session.prepareCommand(Session.java:374)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1056)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:233)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.getPreparedStatement(AbstractBatcher.java:534)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:71)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1700)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.engine.Session.prepareLocal(Session.java:425)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.Loader.doQuery(Loader.java:801)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.getPreparedStatement(AbstractBatcher.java:452)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.prepareQueryStatement(AbstractBatcher.java:161)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.Loader.doList(Loader.java:2533)
-2013-03-05T02:04:24+00:00 app[web.1]: Exception in thread "main" play.exceptions.JavaExecutionException: org.hibernate.exception.SQLGrammarException: could not execute query
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:274)
-2013-03-05T02:04:24+00:00 app[web.1]: 	... 14 more
-2013-03-05T02:04:24+00:00 app[web.1]: 	at Invocation.Job(Play!)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1214)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.ejb.QueryImpl.getSingleResult(QueryImpl.java:307)
-2013-03-05T02:04:24+00:00 app[web.1]: Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute query
-2013-03-05T02:04:24+00:00 app[web.1]: 	at play.db.jpa.JPQL.count(JPQL.java:22)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at models.Structure.count(Structure.java)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at play.jobs.Job.call(Job.java:155)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at Bootstrap.doJob(Bootstrap.java:11)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at play.jobs.Job.doJobWithResult(Job.java:50)
-2013-03-05T02:04:24+00:00 app[web.1]: 	... 1 more
-2013-03-05T02:04:24+00:00 app[web.1]: Caused by: org.hibernate.exception.SQLGrammarException: could not execute query
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:92)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at play.jobs.Job.call(Job.java:146)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2276)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.Loader.doList(Loader.java:2536)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.Loader.list(Loader.java:2271)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:452)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.engine.query.HQLQueryPlan.performList(HQLQueryPlan.java:196)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.hql.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:363)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1268)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.impl.QueryImpl.list(QueryImpl.java:102)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.ejb.QueryImpl.getSingleResult(QueryImpl.java:274)
-2013-03-05T02:04:24+00:00 app[web.1]: 	... 6 more
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
-2013-03-05T02:04:24+00:00 app[web.1]: select count(*) as col_0_0_ from Structure structure0_ limit ? [42102-149]
-2013-03-05T02:04:24+00:00 app[web.1]: Caused by: org.h2.jdbc.JdbcSQLException: Table "STRUCTURE" not found; SQL statement:
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.message.DbException.get(DbException.java:167)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.message.DbException.get(DbException.java:144)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.readTableOrView(Parser.java:4563)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.readTableFilter(Parser.java:1020)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1622)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parseSelectSimple(Parser.java:1729)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parseSelectUnion(Parser.java:1461)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parseSelectSub(Parser.java:1616)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parseSelect(Parser.java:1449)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parsePrepared(Parser.java:401)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parse(Parser.java:275)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.parse(Parser.java:247)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.engine.Session.prepareCommand(Session.java:374)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.prepareCommand(Parser.java:214)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1056)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:71)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.engine.Session.prepareLocal(Session.java:425)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.command.Parser.prepare(Parser.java:201)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.getPreparedStatement(AbstractBatcher.java:534)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:233)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.getPreparedStatement(AbstractBatcher.java:452)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.prepareQueryStatement(AbstractBatcher.java:161)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.Loader.doQuery(Loader.java:801)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.Loader.doList(Loader.java:2533)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:274)
-2013-03-05T02:04:24+00:00 app[web.1]: 	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1700)
-2013-03-05T02:04:24+00:00 app[web.1]: 	... 14 more
-2013-03-05T02:04:24+00:00 app[web.1]: ~
-2013-03-05T02:04:24+00:00 app[web.1]: ~ Ctrl+C to stop
-2013-03-05T02:04:24+00:00 app[web.1]: ~ | '_ \| |/ _' | || |_|
-2013-03-05T02:04:24+00:00 app[web.1]: ~
-2013-03-05T02:04:24+00:00 app[web.1]: ~ play! 1.2.4, http://www.playframework.org
-2013-03-05T02:04:24+00:00 app[web.1]: ~  _ __ | | __ _ _  _| |
-2013-03-05T02:04:24+00:00 app[web.1]: ~ |_|            |__/   
-2013-03-05T02:04:24+00:00 app[web.1]: ~        _            _ 
-2013-03-05T02:04:24+00:00 app[web.1]: ~ |  __/|_|\____|\__ (_)
-2013-03-05T02:04:24+00:00 app[web.1]: ~ 
-2013-03-05T02:04:24+00:00 app[web.1]: 
-2013-03-05T02:04:24+00:00 app[web.1]: ~ framework ID is prod
-2013-03-05T02:04:25+00:00 heroku[web.1]: Process exited with status 0
-2013-03-05T02:04:25+00:00 heroku[web.1]: State changed from starting to crashed
-2013-03-05T02:04:27+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
-2013-03-05T02:04:28+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
+2013-03-05T02:14:41+00:00 heroku[slugc]: Slug compilation started
+2013-03-05T02:15:16+00:00 heroku[api]: Release v8 created by mario.talavera@gmail.com
+2013-03-05T02:15:16+00:00 heroku[api]: Deploy dafca4b by mario.talavera@gmail.com
+2013-03-05T02:15:17+00:00 heroku[slugc]: Slug compilation finished
+2013-03-05T02:15:19+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T02:15:16+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T02:15:22+00:00 heroku[web.1]: Starting process with command `play run --http.port=4507 --%prod -Dprecompiled=true`
+2013-03-05T02:15:25+00:00 app[web.1]: WARNING: Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
+2013-03-05T02:15:25+00:00 app[web.1]: Mar 5, 2013 2:15:25 AM play.Logger warn
+2013-03-05T02:15:26+00:00 app[web.1]: 02:15:26,527 INFO  ~ Starting /app
+2013-03-05T02:15:26+00:00 app[web.1]: 02:15:26,532 INFO  ~ Module crud is available (/app/modules/crud)
+2013-03-05T02:15:26+00:00 app[web.1]: 02:15:26,533 INFO  ~ Module secure is available (/app/modules/secure)
+2013-03-05T02:15:27+00:00 app[web.1]: 02:15:27,321 INFO  ~ Application is precompiled
+2013-03-05T02:15:27+00:00 app[web.1]: 02:15:27,582 WARN  ~ Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
+2013-03-05T02:15:28+00:00 app[web.1]: 02:15:28,952 ERROR ~ 
+2013-03-05T02:15:28+00:00 app[web.1]: 
+2013-03-05T02:15:28+00:00 app[web.1]: @6dgb106no
+2013-03-05T02:15:28+00:00 app[web.1]: Can't start in PROD mode with errors
+2013-03-05T02:15:28+00:00 app[web.1]: 
+2013-03-05T02:15:28+00:00 app[web.1]: JPA error
+2013-03-05T02:15:28+00:00 app[web.1]: A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
+2013-03-05T02:15:28+00:00 app[web.1]: 
+2013-03-05T02:15:28+00:00 app[web.1]: play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+2013-03-05T02:15:28+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
+2013-03-05T02:15:28+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+2013-03-05T02:15:28+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
+2013-03-05T02:15:28+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
+2013-03-05T02:15:28+00:00 app[web.1]: 	... 5 more
+2013-03-05T02:15:28+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+2013-03-05T02:15:28+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+2013-03-05T02:15:28+00:00 app[web.1]: Exception in thread "main" play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+2013-03-05T02:15:28+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+2013-03-05T02:15:28+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
+2013-03-05T02:15:28+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
+2013-03-05T02:15:28+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
+2013-03-05T02:15:28+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
+2013-03-05T02:15:28+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
+2013-03-05T02:15:28+00:00 app[web.1]: 	... 5 more
+2013-03-05T02:15:28+00:00 app[web.1]: ~        _            _ 
+2013-03-05T02:15:28+00:00 app[web.1]: ~ | '_ \| |/ _' | || |_|
+2013-03-05T02:15:28+00:00 app[web.1]: ~ |  __/|_|\____|\__ (_)
+2013-03-05T02:15:28+00:00 app[web.1]: ~ play! 1.2.4, http://www.playframework.org
+2013-03-05T02:15:28+00:00 app[web.1]: ~  _ __ | | __ _ _  _| |
+2013-03-05T02:15:28+00:00 app[web.1]: ~ |_|            |__/   
+2013-03-05T02:15:28+00:00 app[web.1]: ~
+2013-03-05T02:15:28+00:00 app[web.1]: ~ Ctrl+C to stop
+2013-03-05T02:15:28+00:00 app[web.1]: ~ framework ID is prod
+2013-03-05T02:15:28+00:00 app[web.1]: ~ 
+2013-03-05T02:15:28+00:00 app[web.1]: ~
+2013-03-05T02:15:28+00:00 app[web.1]: 
+2013-03-05T02:15:30+00:00 heroku[web.1]: Process exited with status 0
+2013-03-05T02:15:30+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T02:15:30+00:00 heroku[web.1]: State changed from crashed to starting
+2013-03-05T02:15:37+00:00 heroku[web.1]: Starting process with command `play run --http.port=19569 --%prod -Dprecompiled=true`
+2013-03-05T02:15:39+00:00 app[web.1]: Mar 5, 2013 2:15:39 AM play.Logger warn
+2013-03-05T02:15:39+00:00 app[web.1]: WARNING: Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
+2013-03-05T02:15:39+00:00 app[web.1]: 02:15:39,437 INFO  ~ Starting /app
+2013-03-05T02:15:39+00:00 app[web.1]: 02:15:39,439 INFO  ~ Module crud is available (/app/modules/crud)
+2013-03-05T02:15:39+00:00 app[web.1]: 02:15:39,440 INFO  ~ Module secure is available (/app/modules/secure)
+2013-03-05T02:15:39+00:00 app[web.1]: 02:15:39,723 INFO  ~ Application is precompiled
+2013-03-05T02:15:39+00:00 app[web.1]: 02:15:39,847 WARN  ~ Cannot replace CLEARDB_DATABASE_URL in configuration (db=${CLEARDB_DATABASE_URL})
+2013-03-05T02:15:40+00:00 app[web.1]: Can't start in PROD mode with errors
+2013-03-05T02:15:40+00:00 app[web.1]: 
+2013-03-05T02:15:40+00:00 app[web.1]: A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
+2013-03-05T02:15:40+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
+2013-03-05T02:15:40+00:00 app[web.1]: 02:15:40,600 ERROR ~ 
+2013-03-05T02:15:40+00:00 app[web.1]: 
+2013-03-05T02:15:40+00:00 app[web.1]: @6dgb10o3l
+2013-03-05T02:15:40+00:00 app[web.1]: 
+2013-03-05T02:15:40+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
+2013-03-05T02:15:40+00:00 app[web.1]: 	... 5 more
+2013-03-05T02:15:40+00:00 app[web.1]: Exception in thread "main" play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+2013-03-05T02:15:40+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+2013-03-05T02:15:40+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
+2013-03-05T02:15:40+00:00 app[web.1]: Caused by: java.lang.NullPointerException: No datasource configured
+2013-03-05T02:15:40+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
+2013-03-05T02:15:40+00:00 app[web.1]: JPA error
+2013-03-05T02:15:40+00:00 app[web.1]: 	at play.server.Server.main(Server.java:158)
+2013-03-05T02:15:40+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+2013-03-05T02:15:40+00:00 app[web.1]: 	at play.Play.start(Play.java:515)
+2013-03-05T02:15:40+00:00 app[web.1]: 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+2013-03-05T02:15:40+00:00 app[web.1]: play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+2013-03-05T02:15:40+00:00 app[web.1]: 	... 5 more
+2013-03-05T02:15:40+00:00 app[web.1]: 	at play.Play.init(Play.java:300)
+2013-03-05T02:15:40+00:00 app[web.1]: 	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+2013-03-05T02:15:41+00:00 app[web.1]: ~        _            _ 
+2013-03-05T02:15:41+00:00 app[web.1]: ~ | '_ \| |/ _' | || |_|
+2013-03-05T02:15:41+00:00 app[web.1]: ~ |_|            |__/   
+2013-03-05T02:15:41+00:00 app[web.1]: ~  _ __ | | __ _ _  _| |
+2013-03-05T02:15:41+00:00 app[web.1]: ~
+2013-03-05T02:15:41+00:00 app[web.1]: ~ play! 1.2.4, http://www.playframework.org
+2013-03-05T02:15:41+00:00 app[web.1]: ~
+2013-03-05T02:15:41+00:00 app[web.1]: ~ Ctrl+C to stop
+2013-03-05T02:15:41+00:00 app[web.1]: 
+2013-03-05T02:15:41+00:00 app[web.1]: ~ |  __/|_|\____|\__ (_)
+2013-03-05T02:15:41+00:00 app[web.1]: ~ framework ID is prod
+2013-03-05T02:15:41+00:00 app[web.1]: ~ 
+2013-03-05T02:15:45+00:00 heroku[web.1]: Process exited with status 0
+2013-03-05T02:15:45+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-05T02:15:47+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
+2013-03-05T02:15:47+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
