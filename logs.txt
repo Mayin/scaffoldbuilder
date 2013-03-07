@@ -1,101 +1,102 @@
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:407)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeBatch(AbstractJdbc2Statement.java:2737)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeBatch(NewProxyPreparedStatement.java:1723)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
-2013-03-07T11:55:22+00:00 app[web.1]: 	... 17 more
-2013-03-07T11:55:22+00:00 app[web.1]: 11:55:22,752 ERROR ~ 
-2013-03-07T11:55:22+00:00 app[web.1]: 
-2013-03-07T11:55:22+00:00 app[web.1]: Error during job execution (Bootstrap)
-2013-03-07T11:55:22+00:00 app[web.1]: @6dh2d7b46
-2013-03-07T11:55:22+00:00 app[web.1]: RuntimeException occured : Cannot load fixture initial-data.yml: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
-2013-03-07T11:55:22+00:00 app[web.1]: play.exceptions.JavaExecutionException: Cannot load fixture initial-data.yml: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.jobs.Job.call(Job.java:155)
-2013-03-07T11:55:22+00:00 app[web.1]: Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
-2013-03-07T11:55:22+00:00 app[web.1]: 
-2013-03-07T11:55:22+00:00 app[web.1]: Execution exception (In /app/Bootstrap.java around line 12)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.test.Fixtures.loadModels(Fixtures.java:243)
-2013-03-07T11:55:22+00:00 app[web.1]: 
-2013-03-07T11:55:22+00:00 app[web.1]: 	... 1 more
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.jobs.Job.doJobWithResult(Job.java:50)
-2013-03-07T11:55:22+00:00 app[web.1]: Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.jobs.Job.call(Job.java:146)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at Invocation.Job(Play!)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1389)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1317)
-2013-03-07T11:55:22+00:00 app[web.1]: 	... 4 more
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:92)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.test.Fixtures.loadModels(Fixtures.java:221)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1323)
-2013-03-07T11:55:22+00:00 app[web.1]: Caused by: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
-2013-03-07T11:55:22+00:00 app[web.1]: 	at Bootstrap.doJob(Bootstrap.java:12)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:965)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:345)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:268)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:407)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.db.jpa.JPABase._save(JPABase.java:41)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:184)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:962)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1216)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.jobs.Job.call(Job.java:155)
-2013-03-07T11:55:22+00:00 app[web.1]: Caused by: java.sql.BatchUpdateException: Batch entry 0 insert into User (company_id, email, firstname, isAdmin, lastname, password, id) values ('767', 'mario.talavera@gmail.com', 'Mario', '1', 'Talavera', 'secret', '768') was aborted.  Call getNextException to see the cause.
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.test.Fixtures.loadModels(Fixtures.java:243)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1836)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:92)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.jobs.Job.doJobWithResult(Job.java:50)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1317)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at Bootstrap.doJob(Bootstrap.java:12)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.jobs.Job.call(Job.java:146)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeBatch(AbstractJdbc2Statement.java:2737)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at Invocation.Job(Play!)
-2013-03-07T11:55:22+00:00 app[web.1]: 	... 6 more
-2013-03-07T11:55:22+00:00 app[web.1]: Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
-2013-03-07T11:55:22+00:00 app[web.1]: Exception in thread "main" play.exceptions.JavaExecutionException: Cannot load fixture initial-data.yml: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
-2013-03-07T11:55:22+00:00 app[web.1]: Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1389)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:965)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:184)
-2013-03-07T11:55:22+00:00 app[web.1]: 	... 1 more
-2013-03-07T11:55:22+00:00 app[web.1]: 	... 12 more
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.postgresql.jdbc2.AbstractJdbc2Statement$BatchResultHandler.handleError(AbstractJdbc2Statement.java:2598)
-2013-03-07T11:55:22+00:00 app[web.1]: 	... 4 more
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1323)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.db.jpa.JPABase._save(JPABase.java:41)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:268)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
-2013-03-07T11:55:22+00:00 app[web.1]: Caused by: java.sql.BatchUpdateException: Batch entry 0 insert into User (company_id, email, firstname, isAdmin, lastname, password, id) values ('767', 'mario.talavera@gmail.com', 'Mario', '1', 'Talavera', 'secret', '768') was aborted.  Call getNextException to see the cause.
-2013-03-07T11:55:22+00:00 app[web.1]: 	at play.test.Fixtures.loadModels(Fixtures.java:221)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:345)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1216)
-2013-03-07T11:55:22+00:00 app[web.1]: Caused by: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeBatch(AbstractJdbc2Statement.java:2737)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1836)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:407)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:962)
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.postgresql.jdbc2.AbstractJdbc2Statement$BatchResultHandler.handleError(AbstractJdbc2Statement.java:2598)
-2013-03-07T11:55:22+00:00 app[web.1]: 	... 6 more
-2013-03-07T11:55:22+00:00 app[web.1]: 	... 12 more
-2013-03-07T11:55:22+00:00 app[web.1]: 	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
-2013-03-07T11:55:22+00:00 app[web.1]: ~        _            _ 
-2013-03-07T11:55:22+00:00 app[web.1]: ~  _ __ | | __ _ _  _| |
-2013-03-07T11:55:22+00:00 app[web.1]: ~ Ctrl+C to stop
-2013-03-07T11:55:22+00:00 app[web.1]: ~ | '_ \| |/ _' | || |_|
-2013-03-07T11:55:22+00:00 app[web.1]: ~ |  __/|_|\____|\__ (_)
-2013-03-07T11:55:22+00:00 app[web.1]: ~
-2013-03-07T11:55:22+00:00 app[web.1]: ~ |_|            |__/   
-2013-03-07T11:55:22+00:00 app[web.1]: ~ play! 1.2.5, http://www.playframework.org
-2013-03-07T11:55:22+00:00 app[web.1]: ~
-2013-03-07T11:55:22+00:00 app[web.1]: ~ framework ID is prod
-2013-03-07T11:55:22+00:00 app[web.1]: ~ 
-2013-03-07T11:55:24+00:00 heroku[web.1]: Process exited with status 1
-2013-03-07T11:55:24+00:00 heroku[web.1]: State changed from starting to crashed
-2013-03-07T11:55:33+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
-2013-03-07T11:55:33+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
+2013-03-07T12:08:00+00:00 app[web.1]: @6dh2eoee0
+2013-03-07T12:08:00+00:00 app[web.1]: Error during job execution (Bootstrap)
+2013-03-07T12:08:00+00:00 app[web.1]: 
+2013-03-07T12:08:00+00:00 app[web.1]: Execution exception (In /app/Bootstrap.java around line 12)
+2013-03-07T12:08:00+00:00 app[web.1]: RuntimeException occured : Cannot load fixture initial-data.yml: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+2013-03-07T12:08:00+00:00 app[web.1]: Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1389)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1317)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1323)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:965)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.db.jpa.JPABase._save(JPABase.java:41)
+2013-03-07T12:08:00+00:00 app[web.1]: 12:08:00,393 ERROR ~ ERROR: syntax error at or near "User"
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.test.Fixtures.loadModels(Fixtures.java:221)
+2013-03-07T12:08:00+00:00 app[web.1]: 	... 4 more
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.jobs.Job.call(Job.java:155)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at Invocation.Job(Play!)
+2013-03-07T12:08:00+00:00 app[web.1]: Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.test.Fixtures.loadModels(Fixtures.java:243)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at Bootstrap.doJob(Bootstrap.java:12)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.jobs.Job.doJobWithResult(Job.java:50)
+2013-03-07T12:08:00+00:00 app[web.1]: Caused by: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:92)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:268)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:184)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:345)
+2013-03-07T12:08:00+00:00 app[web.1]: play.exceptions.JavaExecutionException: Cannot load fixture initial-d
+ata.yml: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1389)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1216)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:962)
+2013-03-07T12:08:00+00:00 app[web.1]: 	... 6 more
+2013-03-07T12:08:00+00:00 app[web.1]: Caused by: java.sql.BatchUpdateException: Batch entry 0 insert into User (company_id, email, firstname, isAdmin, lastname, password, id) values ('779', 'mario.talavera@gmail.com', 'Mario', '1', 'Talavera', 'secret', '780') was aborted.  Call getNextException to see the cause.
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.postgresql.jdbc2.AbstractJdbc2Statement$BatchResultHandler.handleError(AbstractJdbc2Statement.java:2598)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1836)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:965)
+2013-03-07T12:08:00+00:00 app[web.1]: 	... 11 more
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.test.Fixtures.loadModels(Fixtures.java:221)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:407)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeBatch(AbstractJdbc2Statement.java:2737)
+2013-03-07T12:08:00+00:00 app[web.1]:   Position: 13
+2013-03-07T12:08:00+00:00 app[web.1]: 
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1323)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.db.jpa.JPABase._save(JPABase.java:41)
+2013-03-07T12:08:00+00:00 app[web.1]: Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.test.Fixtures.loadModels(Fixtures.java:243)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at Bootstrap.doJob(Bootstrap.java:12)
+2013-03-07T12:08:00+00:00 app[web.1]: 	... 12 more
+2013-03-07T12:08:00+00:00 app[web.1]: Exception in thread "main" play.exceptions.JavaExecutionException: Cannot load fixture initial-data.yml: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.jobs.Job.call(Job.java:155)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at Invocation.Job(Play!)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.jobs.Job.call(Job.java:146)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.jobs.Job.doJobWithResult(Job.java:50)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1389)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1317)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1323)
+2013-03-07T12:08:00+00:00 app[web.1]: 	... 1 more
+2013-03-07T12:08:00+00:00 app[web.1]: Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.jobs.Job.call(Job.java:146)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.test.Fixtures.loadModels(Fixtures.java:221)
+2013-03-07T12:08:00+00:00 app[web.1]: 	... 4 more
+2013-03-07T12:08:00+00:00 app[web.1]: 	at play.db.jpa.JPABase._save(JPABase.java:41)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:965)
+2013-03-07T12:08:00+00:00 app[web.1]: Caused by: org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:268)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:184)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:345)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+2013-03-07T12:08:00+00:00 app[web.1]: 	... 1 more
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1216)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:962)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1836)
+2013-03-07T12:08:00+00:00 app[web.1]: 	... 6 more
+2013-03-07T12:08:00+00:00 app[web.1]: Caused by: java.sql.BatchUpdateException: Batch entry 0 insert into User (company_id, email, firstname, isAdmin, lastname, password, id) values ('779', 'mario.talavera@gmail.com', 'Mario', '1', 'Talavera', 'secret', '780') was aborted.  Call getNextException to see the cause.
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:407)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.postgresql.jdbc2.AbstractJdbc2Statement$BatchResultHandler.handleError(AbstractJdbc2Statement.java:2598)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeBatch(AbstractJdbc2Statement.java:2737)
+2013-03-07T12:08:00+00:00 app[web.1]: 	... 12 more
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+2013-03-07T12:08:00+00:00 app[web.1]: 	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:92)
+2013-03-07T12:08:00+00:00 app[web.1]: ~        _            _ 
+2013-03-07T12:08:00+00:00 app[web.1]: ~  _ __ | | __ _ _  _| |
+2013-03-07T12:08:00+00:00 app[web.1]: ~ | '_ \| |/ _' | || |_|
+2013-03-07T12:08:00+00:00 app[web.1]: ~ |  __/|_|\____|\__ (_)
+2013-03-07T12:08:00+00:00 app[web.1]: ~ |_|            |__/   
+2013-03-07T12:08:00+00:00 app[web.1]: ~ Ctrl+C to stop
+2013-03-07T12:08:00+00:00 app[web.1]: ~
+2013-03-07T12:08:00+00:00 app[web.1]: ~ framework ID is prod
+2013-03-07T12:08:00+00:00 app[web.1]: ~
+2013-03-07T12:08:00+00:00 app[web.1]: ~ 
+2013-03-07T12:08:00+00:00 app[web.1]: ~ play! 1.2.5, http://www.playframework.org
+2013-03-07T12:08:01+00:00 heroku[web.1]: Process exited with status 1
+2013-03-07T12:08:01+00:00 heroku[web.1]: State changed from starting to crashed
+2013-03-07T12:08:08+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
+2013-03-07T12:08:09+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=thawing-mesa-9845.herokuapp.com fwd="184.90.5.166" dyno= queue= wait= connect= service= status=503 bytes=
