@@ -21,7 +21,7 @@ Structure(cuarta):
 Company(macpaint):
  name: Macpaint
 
-User(mario):
+Person(mario):
  firstname: Mario
  lastname: Talavera
  email: mario.talavera@gmail.com
@@ -29,7 +29,7 @@ User(mario):
  isAdmin: true
  company: macpaint
 
-User(carmen):
+Person(carmen):
  firstname: Carmen
  lastname: Arias
  email: carmen.arias@gmail.com

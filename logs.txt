@@ -1,6 +1,14 @@
 === thawing-mesa-9845 Config Vars
-DATABASE_URL:                  postgres://scfmyvcryliecu:D0I8c5VgkHDifhhsARhqRGmBnB@ec2-54-243-235-100.compute-1.amazonaws.com:5432/dm8u30iccua4k
-HEROKU_POSTGRESQL_CRIMSON_URL: postgres://scfmyvcryliecu:D0I8c5VgkHDifhhsARhqRGmBnB@ec2-54-243-235-100.compute-1.amazonaws.com:5432/dm8u30iccua4k
+DATABASE_URL:                  
+postgres://scfmyvcryliecu:D0I8c5VgkHDifhhsARhqRGmBnB@ec2-54-243-235-100.compute-1.amazonaws.com:5432/dm8u30iccua4k
+HEROKU_POSTGRESQL_CRIMSON_URL: 
+postgres://scfmyvcryliecu:D0I8c5VgkHDifhhsARhqRGmBnB@ec2-54-243-235-100.compute-1.amazonaws.com:5432/dm8u30iccua4k
+postgres://scaffoldingdev:D0I8c5VgkHDifhhsARhqRGmBnB@localhost:5432/scaffoldingdev
 JAVA_OPTS:                     -Xmx384m -Xss512k -XX:+UseCompressedOops
 PATH:                          .play:.jdk/bin:.tools:/usr/local/bin:/usr/bin:/bin
 PLAY_OPTS:                     --%prod -Dprecompiled=true
+
+
+1. figure out how to get local deployment working on postgress
+2. undo changes to bootstrap
+3. deploy to heroku

@@ -8,9 +8,9 @@
     <div class="objectForm">
     #{form action:@create(), enctype:'multipart/form-data'}
         #{crud.form}
-        #{if connectedUser.isAdmin == false}
+        #{if connectedPerson.isAdmin == false}
         #{crud.custom 'company'}
-        <input type="hidden" name="object.company.id" value="${connectedUser.company.id}" />
+        <input type="hidden" name="object.company.id" value="${connectedPerson.company.id}" />
         #{/crud.custom}
         
         #{crud.custom 'isAdmin'}

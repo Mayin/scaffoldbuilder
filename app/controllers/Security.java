@@ -5,7 +5,7 @@ import models.*;
 public class Security extends Secure.Security {
 
 	static boolean authenticate(String email, String password) {
-		return User.connect(email, password) != null;
+		return Person.connect(email, password) != null;
 	}
 	
 	static void onDisconnected() {
@@ -18,7 +18,7 @@ public class Security extends Secure.Security {
 	
 	static boolean check(String profile) {
 	    if("admin".equals(profile)) {
-	        return User.find("byEmail", connected()).<User>first().isAdmin;
+	        return Person.find("byEmail", connected()).<Person>first().isAdmin;
 	    }
 	    return false;
 	}

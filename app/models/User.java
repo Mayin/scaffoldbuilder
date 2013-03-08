@@ -6,7 +6,7 @@ import play.db.jpa.*;
 import play.data.validation.*;
 
 @Entity
-public class User extends Model {
+public class Person extends Model {
 	
 	@Required
 	public String firstname;
@@ -23,7 +23,7 @@ public class User extends Model {
 	@ManyToOne //(cascade=CascadeType.REFRESH, optional=true)
 	public Company company;
 	
-	public User(
+	public Person(
 			String firstname,
 			String lastname,
 			String email,
@@ -34,7 +34,7 @@ public class User extends Model {
 		this.password = password;		
 	}
 	
-	public static User connect(String email, String password) {
+	public static Person connect(String email, String password) {
 	    return find("byEmailAndPassword", email, password).first();
 	}
 	

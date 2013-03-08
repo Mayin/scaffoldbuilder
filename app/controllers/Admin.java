@@ -12,10 +12,10 @@ import models.*;
 public class Admin extends Controller {
 	
 	@Before
-	static void setConnectedUser() {
+	static void setConnectedPerson() {
 		if(Security.isConnected()) {
-			User user = User.find("byEmail", Security.connected()).first();
-			renderArgs.put("user", user.firstname);
+			Person person = Person.find("byEmail", Security.connected()).first();
+			renderArgs.put("person", person.firstname);
 		}
 	}
 	 
@@ -25,8 +25,8 @@ public class Admin extends Controller {
 
     
 //	public static void index() {
-//		String user = Security.connected();
-//		List<Shipment> shipments = Shipment.find("user.email", user).fetch();
+//		String person = Security.connected();
+//		List<Shipment> shipments = Shipment.find("person.email", person).fetch();
 //		render(shipments);
 //	}
 //
@@ -34,14 +34,14 @@ public class Admin extends Controller {
 //		Shipment shipment;
 //		if(id == null) {
 //			// Create Shipment
-//			User user = User.find("byEmail", Security.connected()).first();
-//			shipment = new Shipment(user);
+//			Person person = Person.find("byEmail", Security.connected()).first();
+//			shipment = new Shipment(person);
 //		} else {
 //			// Retrieve Shipments
 //			shipment = Shipment.findById(id);
 //			
 //			// Edit
-//			shipment.user = user;
+//			shipment.person = person;
 //		}
 //		
 //		

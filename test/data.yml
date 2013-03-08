@@ -21,7 +21,7 @@ Structure(cuarta):
  Company(macpaint):
   name: Macpaint
   
- User(mario):
+ Person(mario):
   firstname: Mario
   lastname: Talavera
   email: mario.talavera@gmail.com

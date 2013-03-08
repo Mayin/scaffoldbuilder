@@ -10,7 +10,7 @@
     </div>
 
     <div id="crudListTable">
-    #{if user.isAdmin}
+    #{if person.isAdmin}
      	#{crud.table fields:['firstname', 'lastname',  'company', 'isAdmin'] /}
     #{/if}
     #{else}
