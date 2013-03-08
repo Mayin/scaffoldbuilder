@@ -7,13 +7,12 @@ import models.*;
 
 @OnApplicationStart
 public class Bootstrap extends Job {
-	public void doJob() {
-
+//	public void doJob() {
 //		if (Structure.count() == 0) {
-			Fixtures.deleteDatabase();
-			Fixtures.loadModels("initial-data.yml");
+//			Fixtures.deleteDatabase();
+//			Fixtures.loadModels("initial-data.yml");
 //		}
-	}
+//	}
 }
 
 
