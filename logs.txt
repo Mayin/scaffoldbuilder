@@ -1,2 +1,3 @@
 === pacific-lake-3485 Config Vars
-HEROKU_POSTGRESQL_JADE_URL: postgres://weqqpfdmbcsqbv:3AeD4KAB8DhhWnTG3ASbG1vS4b@ec2-107-22-183-27.compute-1.amazonaws.com:5432/ddsj6nohltoubv
+HEROKU_POSTGRESQL_JADE_URL: 
+postgres://weqqpfdmbcsqbv:3AeD4KAB8DhhWnTG3ASbG1vS4b@ec2-107-22-183-27.compute-1.amazonaws.com:5432/ddsj6nohltoubv
